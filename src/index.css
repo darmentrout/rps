@@ -1,23 +1,38 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #867eae;
+}
+
+h1, h2,
+h3, h4,
+h5, h6 {
+  text-align: center;
 }
 
 .container {
-  width: 80%;
+  width: 90%;
+  max-width: 500px;
   margin: 2rem auto;
+  padding: 2rem 1rem;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: #f2effe;
+}
+
+.container > div {
+  width: 100%;
+}
+
+ul,
+ol {
+  padding: 0px;
 }
 
 th,
@@ -25,10 +40,68 @@ td {
   text-align: center;
 }
 
-#theArena span {
-  display: none;
+button {
+	padding: 5px;
+	border-radius: 5px;
+	border: 1px solid #666;
+	box-shadow: none;
+  margin: 1rem 5px;
+  background: #eb92de;
+  font-weight: bold;
 }
 
-#theArena .winner {
+#arena div {
+  width: 75%;
+  margin: 0 auto;
+}
+
+#arena p {
+  width: 100%;
+}
+
+#arena span {
+  display: none;
+  font-size: small;
+  padding-left: .5rem;
+}
+
+#arena span.winner {
   display: inline;
+}
+
+#history table {
+  margin: 0 auto;
+}
+
+#reset button {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#shoot {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#shoot button,
+#history th  {
+  width: 30%;
+}
+
+#history {
+  margin: 1rem 0;
+}
+
+#log li {
+  list-style-type: none;
+  font-size: small;
+}
+
+#logList {
+  min-height: 1rem;
+}
+
+#reset {
+  margin-top: 2rem;
 }

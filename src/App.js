@@ -169,6 +169,7 @@ class App extends Component {
 
     return (
       <div className="container">
+      <h1>Rock, Paper, Scissors</h1>
         <Arena 
           numberToSign={this.numberToSign}
           robot={this.state.robotMove} 
@@ -177,11 +178,7 @@ class App extends Component {
           playerWin={this.state.playerWin}
           robotWin={this.state.robotWin}
         />
-        <br />
-        <br />
         <Shoot sign={this.takeTurn} />
-        <br />
-        <br />
         <History 
           rock={this.state.playerHistory.rock} 
           paper={this.state.playerHistory.paper} 
