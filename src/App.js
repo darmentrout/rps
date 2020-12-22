@@ -186,6 +186,7 @@ class App extends Component {
         />
         <Log log={this.state.gameLog} />
         <Reset reset={this.resetStats} />
+        <small id="copyright">&copy; <span id="copyyear">{ (new Date()).getFullYear() }</span> Damion Armentrout</small>
       </div>
     );
   }

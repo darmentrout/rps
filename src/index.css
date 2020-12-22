@@ -115,3 +115,7 @@ button {
 #reset {
   margin-top: 2rem;
 }
+
+#copyright {
+  margin: 2rem auto .5rem;
+}
