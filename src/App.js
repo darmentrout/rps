@@ -98,8 +98,6 @@ class App extends Component {
       minute: '2-digit', 
       second: '2-digit' 
     });
-    
-
     const gameTime = dateFormat.format( new Date() );
 
     let history = this.state.gameLog;
@@ -150,20 +148,20 @@ class App extends Component {
     return word;
 }
 
-  playerSign = n => {
-    let signs = {...this.state.playerHistory};
-    const whichSign = Object.keys(signs)[n];
-    signs[whichSign]++;
-    return signs;
-  };
+playerSign = n => {
+  let signs = {...this.state.playerHistory};
+  const whichSign = Object.keys(signs)[n];
+  signs[whichSign]++;
+  return signs;
+};
 
-  takeTurn = n => {
-    this.setState({ 
-      playerHistory: this.playerSign(n),
-      playerMove: n,
-      robotMove: this.randomNumber()
-    }, this.determineWinner);
-  }
+takeTurn = n => {
+  this.setState({ 
+    playerHistory: this.playerSign(n),
+    playerMove: n,
+    robotMove: this.randomNumber()
+  }, this.determineWinner);
+}
 
   render() {  
 
